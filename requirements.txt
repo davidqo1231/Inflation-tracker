@@ -1,6 +1,9 @@
-tidyverse
 lubridate
+ggplot2
+stringr
 ggiraph
 htmlwidgets
 gt
 gtExtras
+purrr
+
