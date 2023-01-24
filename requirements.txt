@@ -3,3 +3,4 @@ lubridate
 ggiraph
 htmlwidgets
 gt
+gtExtras
