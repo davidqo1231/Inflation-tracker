@@ -3,6 +3,7 @@ library(lubridate)
 library(ggiraph)
 library(htmlwidgets)
 library(gt)
+library(gtExtras)
 
 # WRANGLING
 Zoznam <- read.csv("https://raw.githubusercontent.com/davidqo1231/Inflation-tracker/main/cpiweights.csv", sep = ";") %>%
@@ -82,10 +83,10 @@ make_table <- function(name) {
     filter(Kod == name) %>%
     select(YoY, MoM, YoY_data) %>%
     gt() %>%
-    gt::cols_width(YoY ~ px(80),
+    cols_width(YoY ~ px(80),
                    MoM ~ px(90),
                    YoY_data ~ px(160),) %>%
-    gtExtras::gt_plt_sparkline(YoY_data, 
+    gt_plt_sparkline(YoY_data, 
                                type = "shaded", 
                                fig_dim = c(8, 45),
                                palette = c("white", "white", "green", "red", "#7FC8E8")) %>%
@@ -109,7 +110,7 @@ make_table <- function(name) {
 }
 
 df_table <- df %>%
-  mutate(table = purrr::map(Kod, make_table)) %>%
+  mutate(table = map(Kod, make_table)) %>%
   select(Popis, Kod, YoY, MoM, table) %>%
   mutate(Popis = gsub("(\\S* \\S* \\S* \\S* \\S*)","\\1<br>", Popis)) %>%
   mutate(table_full = paste("<center><b>",Popis,"</b></center>",table)) 
