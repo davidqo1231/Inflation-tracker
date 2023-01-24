@@ -1,9 +1,4 @@
+dplyr
+tidyr
 lubridate
-ggplot2
 stringr
-ggiraph
-htmlwidgets
-gt
-gtExtras
-purrr
-
