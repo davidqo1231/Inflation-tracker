@@ -1,9 +1,11 @@
-library(tidyverse)
 library(lubridate)
+library(ggplot2)
+library(stringr)
 library(ggiraph)
 library(htmlwidgets)
 library(gt)
 library(gtExtras)
+library(purrr)
 
 # WRANGLING
 Zoznam <- read.csv("https://raw.githubusercontent.com/davidqo1231/Inflation-tracker/main/cpiweights.csv", sep = ";") %>%
@@ -190,7 +192,7 @@ interactive<-girafe(ggobj=plot,
                                    opts_sizing(rescale = TRUE, width = 1)),
                     width_svg=9, height_svg=5.25)
 #Preview
-interactive
+#interactive
 
 #save plot as HTML file
 saveWidget(interactive, "inflation-tracker.html", selfcontained = T)
