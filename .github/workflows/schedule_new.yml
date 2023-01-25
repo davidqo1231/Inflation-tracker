@@ -31,7 +31,7 @@ jobs:
             any::gtExtras
             any::purrr
             any::svglite
-            any::systemfonts
+            #any::systemfonts
 
       - name: run-script
         run: Rscript main.R        
