@@ -21,6 +21,12 @@ jobs:
             any::tidyr
             any::lubridate
             any::stringr
+            any::ggplot2
+            any::ggiraph
+            any::htmlwidgets
+            any::gt
+            any::gtExtras
+            any::purrr
 
       - name: run-script
         run: Rscript main.R        
