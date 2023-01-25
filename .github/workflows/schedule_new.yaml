@@ -27,6 +27,7 @@ jobs:
             any::gt
             any::gtExtras
             any::purrr
+            any::svglite
 
       - name: run-script
         run: Rscript main.R        
