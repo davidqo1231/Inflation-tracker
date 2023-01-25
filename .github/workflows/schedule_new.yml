@@ -1,5 +1,8 @@
 on:
   workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string (runs every day at 10:05 UTC = 9:05 (SVK))
+    - cron:  "05 10 * * *"
 
 name: Inflation_scheduler
 
