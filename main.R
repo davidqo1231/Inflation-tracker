@@ -8,6 +8,7 @@ library(htmlwidgets)
 library(gt)
 library(gtExtras)
 library(purrr)
+library(svglite)
 
 # WRANGLING
 Zoznam <- read.csv("https://raw.githubusercontent.com/davidqo1231/Inflation-tracker/main/cpiweights.csv", sep = ";") %>%
