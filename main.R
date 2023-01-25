@@ -9,7 +9,7 @@ library(gt)
 library(gtExtras)
 library(purrr)
 library(svglite)
-library(systemfonts)
+#library(systemfonts)
 
 # WRANGLING
 Zoznam <- read.csv("https://raw.githubusercontent.com/davidqo1231/Inflation-tracker/main/cpiweights.csv", sep = ";") %>%
