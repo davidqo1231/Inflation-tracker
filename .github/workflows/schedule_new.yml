@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    # * is a special character in YAML so you have to quote this string (runs every day at 10:05 UTC = 9:05 (SVK))
+    # * is a special character in YAML so you have to quote this string (runs every month on 13th, 14th and 15th day at 8:01 UTC = 9:01 (SVK))
     - cron:  "1 8 13,14,15 * *"
   push:
     branches:
